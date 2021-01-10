@@ -9,7 +9,7 @@ import timber.log.Timber
 
 object ListObject {
 
-    private const val elementsCount = 1
+    private const val elementsCount = 15
     private const val longTimeMillis: Long = 5000
     private var pool: MutableList<DataNumber> = mutableListOf()
 
