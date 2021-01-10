@@ -34,7 +34,11 @@ class DataListAdapter(private val clickListener: DataNumberListener) :
         ) {
             binding.dataNumber = item
             binding.clickListener = clickListener
+            bindAnimation(position, context)
             binding.executePendingBindings()
+        }
+
+        private fun bindAnimation(position: Int, context: Context) {
             if (position % 2 == 0) {
                 binding.cardView.animation =
                     AnimationUtils.loadAnimation(context, R.anim.swing_up_left)
