@@ -39,22 +39,34 @@ object ListObject {
 
     private fun addElementToList(element: DataNumber) {
         val newValue: MutableList<DataNumber> = mutableListOf()
+
         list.value?.let { newValue.addAll(it) }
+
         newValue.add(element)
+
         newValue.sortBy {
             it.number
         }
+
         list.postValue(newValue)
     }
 
     fun deleteElementToList(element: DataNumber) {
         val newValue: MutableList<DataNumber> = mutableListOf()
+
         list.value?.let { newValue.addAll(it) }
+
         newValue.remove(element)
+
         newValue.sortBy {
             it.number
         }
         list.postValue(newValue)
+
         pool.add(element)
+
+        pool.sortBy {
+            it.number
+        }
     }
 }
