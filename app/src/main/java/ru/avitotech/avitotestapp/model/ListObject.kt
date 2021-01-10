@@ -9,7 +9,7 @@ import timber.log.Timber
 
 object ListObject {
 
-    private const val elementsCount = 15
+    private const val elementsCount = 1
     private const val longTimeMillis: Long = 5000
     private var pool: MutableList<DataNumber> = mutableListOf()
 
@@ -42,7 +42,7 @@ object ListObject {
 
         list.value?.let { newValue.addAll(it) }
 
-        val randomIndex = (0..newValue.size.plus(1)).random()
+        val randomIndex = (0..newValue.size).random()
         newValue.add(randomIndex, element)
 
         list.postValue(newValue)
