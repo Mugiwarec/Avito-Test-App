@@ -15,13 +15,14 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:cardBackgroundColor="@color/gray">
 
         <RelativeLayout
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="8dp">
 
@@ -42,7 +43,6 @@
                 android:layout_height="50dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:layout_toEndOf="@id/item_text_view"
                 android:onClick="@{() -> clickListener.onClick(dataNumber)}"
                 android:src="@drawable/ic_baseline_delete_24"
                 tools:ignore="ContentDescription" />

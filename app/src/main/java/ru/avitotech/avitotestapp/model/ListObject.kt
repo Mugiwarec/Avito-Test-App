@@ -42,11 +42,8 @@ object ListObject {
 
         list.value?.let { newValue.addAll(it) }
 
-        newValue.add(element)
-
-        newValue.sortBy {
-            it.number
-        }
+        val randomIndex = (0..newValue.size).random()
+        newValue.add(randomIndex, element)
 
         list.postValue(newValue)
     }
@@ -58,9 +55,6 @@ object ListObject {
 
         newValue.remove(element)
 
-        newValue.sortBy {
-            it.number
-        }
         list.postValue(newValue)
 
         pool.add(element)
