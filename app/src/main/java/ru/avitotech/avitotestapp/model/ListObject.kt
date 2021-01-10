@@ -42,7 +42,7 @@ object ListObject {
 
         list.value?.let { newValue.addAll(it) }
 
-        val randomIndex = (0..newValue.size).random()
+        val randomIndex = (0..newValue.size.plus(1)).random()
         newValue.add(randomIndex, element)
 
         list.postValue(newValue)
